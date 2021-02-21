@@ -42,3 +42,14 @@ code {
 .action-icons:hover {
   cursor: pointer;
 }
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid black;
+  padding: 1em 1em;
+  margin: 1em 1em;
+  margin-top: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+}
