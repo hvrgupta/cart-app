@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.cart {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1em;
+  padding: 0 1em;
+}
+
+
 .cart-item {
   display: inline-flex;
   margin: 20px 10px;

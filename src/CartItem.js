@@ -57,18 +57,18 @@ class CartItem extends Component {
                         <img 
                             alt="increase" 
                             className="action-icons" 
-                            src="https://www.flaticon.com/svg/vstatic/svg/1828/1828926.svg?token=exp=1613830116~hmac=ac9edf273f849ffb04d5fe0dcbe302b2" 
+                            src="https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1613913257~hmac=40f9f3afda5691f16972cc2970e678b1" 
                             onClick={this.increaseQuantity}/>
                         <img 
                             alt="decrease" 
                             className="action-icons" 
-                            src="https://www.flaticon.com/svg/vstatic/svg/1828/1828906.svg?token=exp=1613830073~hmac=71604b9ba1c45e3eea14a54106e8b53e" 
+                            src="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1613913626~hmac=292ac20a2919d9a7da9fc298c28f3565"
                             onClick={this.decreaseQuantity}/>
                         
                         <img 
                             alt="delete" 
                             className="action-icons" 
-                            src="https://www.flaticon.com/svg/vstatic/svg/3096/3096673.svg?token=exp=1613830169~hmac=e6ae55609e6908e1d052428e6c3ca79d" 
+                            src="https://www.flaticon.com/svg/vstatic/svg/1214/1214428.svg?token=exp=1613913666~hmac=684a06a53754fe24017084ae86abcfa9" 
                             />
                     </div>
                  </div>
