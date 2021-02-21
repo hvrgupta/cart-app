@@ -30,6 +30,52 @@ class Cart extends Component {
         }
         // this.increaseQuantity = this.increaseQuantity.bind(this);
     }
+
+    handleIncreaseQuantity = (product) => {
+        // console.log(product);
+        const { products } = this.state;
+        let index = products.indexOf(product);
+        products[index].qty += 1;
+        this.setState({
+            products : products
+        })
+    }
+
+    handleDecreaseQuantity = (product) => {
+        const { products } = this.state;
+        let index = products.indexOf(product);
+        if(products[index].qty === 0) {
+            return;
+        }
+        products[index].qty -= 1;
+        this.setState({
+            products: products
+        })
+    }
+
+    // handleDeleteProduct = (product) => {
+    //     console.log(this.state);
+    //     const { products } = this.state;
+    //     let index = products.indexOf(product);
+    //     products.splice(index,1);
+    //     this.setState({
+    //         products
+    //     })
+    // }
+
+    //Sir implementation
+
+    handleDeleteProduct = (id) => {
+        
+        const { products } = this.state;
+        const items = products.filter((item) => item.id !== id);
+        this.setState({
+            products: items
+        },() => {
+            console.log(this.state)
+        })
+    }
+
     render() {
         const { products } = this.state;
         return(
@@ -37,7 +83,13 @@ class Cart extends Component {
                 {/* <CartItem qty={1} price={99} title={'Watch'} img={''}/> */}
                 {
                     products.map((product) => {
-                        return <CartItem product={product} key={product.id}/>
+                        return <CartItem 
+                                product={product} 
+                                key={product.id} 
+                                onIncreaseQty={this.handleIncreaseQuantity}
+                                onDecreaseQty={this.handleDecreaseQuantity}
+                                onDeleteProduct={this.handleDeleteProduct}
+                                />
                     })
                 }
             </div>
